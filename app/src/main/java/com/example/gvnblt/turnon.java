@@ -58,7 +58,7 @@ public class turnon extends AppCompatActivity {
         else {
             mBlueIv.setImageResource(R.drawable.ic_action_off);
         }
-        //next
+        //nextunau
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
