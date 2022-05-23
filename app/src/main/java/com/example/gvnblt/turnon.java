@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
-
+import java.util.UUID;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,7 +25,7 @@ public class turnon extends AppCompatActivity {
     Button mOnBtn, mOffBtn, mDiscoverBtn, mPairedBtn,next;
 
     BluetoothAdapter mBlueAdapter;
-
+    UUID MY_UUID=UUID.fromString("8a40c7ca-da8e-11ec-9d64-0242ac120002");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,22 +109,22 @@ public class turnon extends AppCompatActivity {
             }
         });
         //get paired devices btn click
-        mPairedBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mBlueAdapter.isEnabled()){
-                    mPairedTv.setText("Paired Devices");
-                    Set<BluetoothDevice> devices = mBlueAdapter.getBondedDevices();
-                    for (BluetoothDevice device: devices){
-                        mPairedTv.append("\nDevice: " + device.getName()+ ", " + device);
-                    }
-                }
-                else {
-                    //bluetooth is off so can't get paired devices
-                    showToast("Turn on bluetooth to get paired devices");
-                }
-            }
-        });
+//        mPairedBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (mBlueAdapter.isEnabled()){
+//                    mPairedTv.setText("Paired Devices");
+//                    Set<BluetoothDevice> devices = mBlueAdapter.getBondedDevices();
+//                    for (BluetoothDevice device: devices){
+//                        mPairedTv.append("\nDevice: " + device.getName()+ ", " + device);
+//                    }
+//                }
+//                else {
+//                    //bluetooth is off so can't get paired devices
+//                    showToast("Turn on bluetooth to get paired devices");
+//                }
+//            }
+//        });
 
 
     }
