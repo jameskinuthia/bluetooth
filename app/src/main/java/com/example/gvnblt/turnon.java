@@ -37,8 +37,8 @@ public class turnon extends AppCompatActivity {
         mOnBtn        = findViewById(R.id.onBtn);
         mOffBtn       = findViewById(R.id.offBtn);
         mDiscoverBtn  = findViewById(R.id.discoverableBtn);
-        mPairedBtn    = findViewById(R.id.pairedBtn);
-        next    = findViewById(R.id.nextpage);
+        //mPairedBtn    = findViewById(R.id.pairedBtn);
+        next          = findViewById(R.id.nextpage);
 
         //adapter
         mBlueAdapter = BluetoothAdapter.getDefaultAdapter();
